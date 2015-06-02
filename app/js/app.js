@@ -1,13 +1,14 @@
 /**
  * Created by leonk1 on 6/2/15.
  */
+var app;
 (function () {
     'use strict';
+    app = angular.module('EmployeesApp', [
+        'ui.router', 'ngResource'
+    ]);
 
-    angular.module('EmployeesApp', [
-        'ui.router'
-    ])
-        .config(config);
+    app.config(config);
 
     function config($urlRouterProvider, $stateProvider) {
         $urlRouterProvider
@@ -16,14 +17,12 @@
             .state('/', {
                 url: '/',
                 templateUrl: '/app/html/partial/home.html',
-                controller: 'homeCtrl'
+                controller: 'EmployeesCtrl'
             })
             .state('home', {
                 url: 'home',
                 templateUrl: '/app/html/partial/home.html',
-                controller: 'homeCtrl'
+                controller: 'EmployeesCtrl'
             });
     }
-
-    //ApplicationController.$inject = ['$scope', '$rootScope'];
 })();
