@@ -1,14 +1,24 @@
 /**
  * Created by leonk1 on 6/2/15.
  */
-app.factory('EmployeeService', function ($resource) {
-    return $resource("https://demo4322885.mockable.io/")
-});
 
-app.factory('RoleService', function ($http) {
+(function () {
+    angular.module('EmployeesApp')
+        .service('MyServices', MyServices)
+        .service('Authentication', Authentication);
 
-});
+    MyServices.$inject = ['ngResource'];
+    function MyServices($resource) {
+        var service = {};
 
-app.factory('AuthenticationService', function ($http) {
+        service.getAllEmployees = function () {
+            return $resource.query("https://demo4322885.mockable.io/");
+        };
+        return service;
+    }
 
+    Authentication.$inject = [];
+    function Authentication() {
+
+    }
 });

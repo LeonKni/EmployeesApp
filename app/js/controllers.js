@@ -1,9 +1,17 @@
 /**
  * Created by leonk1 on 6/2/15.
  */
-app.controller('EmployeesCtrl', function ($scope, Employee) {
-    //$scope.employees = [{name: 'john', title: 'developer'}, {name: 'test', title: 'developer'}];
-    Employee.query(function (data) {
-        $scope.employees = data;
-    })
-});
+app.controller('EmployeesCtrl', EmployeesCtrl);
+
+EmployeesCtrl.$inject = ['$scope', 'MyServices'];
+
+function EmployeesCtrl($scope, MyServices) {
+    MyServices.getAllEmployees()
+        .success(function (data) {
+            $scope.employees = data;
+            console.log('Employees: ' + data)
+        })
+        .error(function () {
+
+        });
+}

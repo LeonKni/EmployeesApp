@@ -1,20 +1,7 @@
 /******************** NavBar Elements ***********************/
-#navContainer {
-    background: rgba(7, 6, 7, 0.93);
-    height: auto;
-    border-bottom: none;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    box-shadow: 18px 8px 20px #888888;
-}
 
-#leftNavbar {
-    padding-left: 20px;
-}
-
-#btnServices {
-    margin-top: 10px;
+.navbar-default{
+    background-color: #D5E8EF;
 }
 
 /* SmartPhones */
@@ -24,34 +11,4 @@
         border-top: none;
     !important;
     }
-}
-
-#navBtn {
-    margin-bottom: 20px;
-}
-
-#navTitle {
-    margin-top: 0;
-    font-family: fantasy;
-    font-weight: bolder;
-    color: rgba(108, 153, 97, 0.76);
-}
-
-#navSubTitle {
-    color: rgba(108, 153, 97, 0.76);
-}
-
-#navMotto {
-    margin-top: 62px;
-    margin-left: 10px;
-    font-family: 'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
-    font-style: italic;
-}
-
-
-/***************** Other Elements *****************/
-.fb-like-box {
-    padding-left: 50px;
-    width: 350px;
-    height: 300px;
 }

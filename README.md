@@ -1,6 +1,4 @@
 # EmployeesApp
-Skills assessment for Headspring
-
 This is a Single Page Application using AngularJS, and Bootstrap
 
 Back-end is mocked up using <a href="https://www.mockable.io/a/#/space/demo4322885/rest">Mockable</a>,
